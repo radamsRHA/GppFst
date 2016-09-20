@@ -1,0 +1,8 @@
+export(GppDxy)
+export(GppDxy.UncertainModel)
+export(GppFst)
+export(read.posterior)
+export(simSeqfromSp2)
+importFrom(phybase, is.rootedtree)
+importFrom(Geneland, Fstat)
+

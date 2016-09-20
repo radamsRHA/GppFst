@@ -1,0 +1,14 @@
+Package: GppFst
+Title: Posterior Predictive Simulations for generating theoretical distributions of Fst and Dxy under the neutral coalescent model for two species
+Version: 0.0.1.0
+Authors@R: person("Rich Adams, Drew Schield, Daren Card, Todd Castoe", "X", email = "radams@uta.edu", role = c("aut", "cre"))
+Description: Posterior Predictive Simulations for generating theoretical distributions of Fst and Dxy under the neutral coalescent model for two species
+Depends:
+    R (>= 3.2.2)
+License: GLP >= 2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1.9000
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
