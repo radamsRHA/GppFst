@@ -307,5 +307,6 @@ text(x=.2,y=40,"51 simulations (red) have posterior \npredictive p-values of les
 
 ## Comparison to Arlequin 
 We compared our method to the Arlequin function for detecting loci under selection. The results of this analysis are provided in the vignettes folder, including the Arelquin output file (Example_ArlequinResults.csv), and two plots showing the joint distribution of heterozygosity and significance (Example_lociSelection_FST.png,Example_lociSelection_Names_FST.png). Three main points are clear from these comparisons:
-1) The number of significant loci are  
-2) XXX
+ * The number of significant loci are  
+ * XXX
+ * YYY
