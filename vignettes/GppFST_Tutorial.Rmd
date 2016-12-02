@@ -317,3 +317,5 @@ We compared our method to the Arlequin function for detecting loci under selecti
  * Practically speaking, this means that every time Arlequin is run on a set of neutral loci that evolved under these conditions, Arlequin will always assign statistical significance to any SNP with an FST = 1. 
  * With Gppfst, only 4 out of the 100 replicate datasets yields an excess of SNPs with an FST = 1 that is (incorretly) statistically significant (FDR = 5%).
  * The main difference between Arlequin and Gppfst is that Arlequin computes significance for individual loci conditioned on the observed level of heterozygosities, whereas GppFst will compute the probability of observing an empirical proportion of loci within a given Fst range conditioned on the particular coalescent model of population divergence (see Fig. 1 in manuscript and plots)
+ * To summarize, we expect a certain proportion of loci that evolved under strictly neutral conditions to be completely fixed in different populations (FST = 1) for many populations that are not at equilibrium. GppFst – unlike many other methods – will appropriately account for this expectation. 
+ 
