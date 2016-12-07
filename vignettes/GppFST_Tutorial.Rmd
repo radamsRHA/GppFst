@@ -274,7 +274,7 @@ In this case, it is reasonable to suspect that not all of the 10 loci with Fst v
 ```
 
 ## FDR analysis
-To insure that our method is working correctly we can also evaluate the FDR.  To do this we use a dataset simulated with parameters similar to those we inferred while analyzing the atrox data.  However, in this case there is no selection on any loci.  In our analysis we used an Fst cutoff value of 1 to test if we had a signal for selection.  We then perform our analysis as described above and any test that returns a positive result is a type 1 error.  As expected we have an approximately 5% error rate.
+To insure that our method is working correctly we can also evaluate the FDR.  To do this we use a dataset simulated with parameters theta = tau = 0.01.  However, in this case there is no selection on any loci.  In our analysis we used an Fst cutoff value of 1 to test if we had a signal for selection.  We then perform our analysis as described above and any test that returns a positive result is a type 1 error.  As expected we have an approximately 5% error rate.
 
 ```{r, echo=FALSE}
 data(FDR_results)
