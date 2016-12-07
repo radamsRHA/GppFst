@@ -290,7 +290,7 @@ text(x=0,y=13,"Only four simulations (red) have posterior \npredictive p-values 
 
 
 ## Power analysis
-To assess the power of our method we simulated data with  [msms](http://www.mabs.at/ewing/msms/index.shtml) using parameters informed by our analysis of *Atrox*. Briefly, we simulated 10,100 loci, 100 loci were under selection, and the selection coefficient was set to 0.01.  We then used a cutoff of FST=1 and found that our approach was able to recover a significant signal in 51% of the simulated datasets.
+To assess the power of our method we simulated data with  [msms](http://www.mabs.at/ewing/msms/index.shtml) using parameters (theta = tau = 0.01). Briefly, we simulated 10,100 loci, 100 loci were under selection, and the selection coefficient was set to 0.01.  We then used a cutoff of FST=1 and found that our approach was able to recover a significant signal in 51% of the simulated datasets.
 
 ```{r, echo=FALSE}
 data(power_results)
