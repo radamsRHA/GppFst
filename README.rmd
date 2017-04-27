@@ -1,5 +1,5 @@
 # GppFst: Genomic Posterior Predictive Fst simulations  
-**NOTE See the file <https://github.com/radamsRHA/GppFst/blob/master/GppFST_Tutorial.pdf> for detailed instructions**
+**NOTE See the file <https://github.com/radamsRHA/GppFst/blob/master/vignettes/GppFst_Tutorial.pdf> for detailed instructions**
 
 Steps for conducting posterior predictive simulations for Fst and Dxy. 
 
