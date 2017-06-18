@@ -79,15 +79,38 @@ GppDxy <- function(posterior.samples, loci.per.step, sample.vec.0, sample.vec.1,
 			
 			locus.dxy.vec <- character(pop0.sample.count*pop1.sample.count) # Init dxy vector for locus
 			count.compare = 0
+			pop0.hap.vec <- rep(NA, pop0.sample.count)
+			pop1.hap.vec <- rep(NA, pop1.sample.count)
+			
+			for (pop0.sample in 1:pop0.sample.count){
+				pop0.0.sample.sequence <- pop0.aln[pop0.sample,] # Get X sample
+				pop0.0.sample.sequence <- paste( unlist(pop0.0.sample.sequence), collapse='')
+				pop0.hap.vec[pop0.sample] <- pop0.0.sample.sequence
+			}
+			for (pop1.sample in 1:pop1.sample.count){
+				pop1.sample.sequence <- pop0.aln[pop1.sample,] # Get X sample
+				pop1.sample.sequence <- paste( unlist(pop1.sample.sequence), collapse='')
+				pop1.hap.vec[pop1.sample] <- pop1.sample.sequence
+			
+			}
+			
 			for (pop0.sample in 1:pop0.sample.count){
 				pop0.sample.sequence <- pop0.aln[pop0.sample,] # Get X sample
+				pop0.2.sample.sequence <- paste( unlist(pop0.sample.sequence), collapse='')
+				di <- table(pop0.hap.vec)[names(table(pop0.hap.vec))==pop0.2.sample.sequence]/pop0.sample.count
+				
 				for (pop1.sample in 1:pop1.sample.count){
 					count.compare = count.compare +1 # Up count
 					pop1.sample.sequence <- pop1.aln[pop1.sample,] # Get X sample
-					x = length(pop0.sample.sequence[pop0.sample.sequence != pop1.sample.sequence]) # Compare two sequences, count number of differences
-					diff <- x/num.sites # Divide the number of different nucleotides by the length
+					pop1.2.sample.sequence <- paste( unlist(pop1.sample.sequence), collapse='')
+					dj <- table(pop1.hap.vec)[names(table(pop1.hap.vec))==pop1.2.sample.sequence]/pop1.sample.count
 					
-					locus.dxy.vec[count.compare] <- diff # Append difference count
+					#x = length(pop0.sample.sequence[pop0.sample.sequence != pop1.sample.sequence]) # Compare two sequences, count number of differences
+					#diff <- x/num.sites # Divide the number of different nucleotides by the length
+					
+					diff = (length(pop0.sample.sequence[pop0.sample.sequence != pop1.sample.sequence]))/num.sites # Compare two sequences, count number of differences
+					
+					locus.dxy.vec[count.compare] <- di*dj*diff # Append difference count
 
 				}
 			}
