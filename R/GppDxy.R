@@ -88,7 +88,7 @@ GppDxy <- function(posterior.samples, loci.per.step, sample.vec.0, sample.vec.1,
 				pop0.hap.vec[pop0.sample] <- pop0.0.sample.sequence
 			}
 			for (pop1.sample in 1:pop1.sample.count){
-				pop1.sample.sequence <- pop0.aln[pop1.sample,] # Get X sample
+				pop1.sample.sequence <- pop1.aln[pop1.sample,] # Get X sample
 				pop1.sample.sequence <- paste( unlist(pop1.sample.sequence), collapse='')
 				pop1.hap.vec[pop1.sample] <- pop1.sample.sequence
 			
