@@ -32,6 +32,11 @@ library(phybase) # Load dependancy phybase
 library(Geneland) # Load dependancy Geneland
 ```
 
+UPDATE: it seems that Geneland has been removed from Cran. As a potential work around, you can install gfortran for mac, for example (https://github.com/fxcoudert/gfortran-for-macOS/releases), and then use the command:
+
+```
+install_github("https://github.com/cran/Geneland")
+```
 
 To begin using `GppFst` try using our vignette with example files provided with this package. See the directory ./GppFst_Tutorial/ for example files and tutorial. 
 
